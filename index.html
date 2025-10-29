@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Check</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Home Page -->
+  <div class="container show" id="homePage">
+    <div class="header">ATTENDANCE CHECK</div>
+    <p>Enter School ID Number</p>
+    <div class="input-box">
+      <input type="text" id="schoolId">
+    </div>
+    <button class="btn" onclick="submitForm()">Submit</button>
+    <div class="footer">@Cordova Public College</div>
+  </div>
+
+  <!-- Result Page -->
+  <div class="container" id="resultPage">
+    <div class="header">ATTENDANCE CHECK</div>
+    <p>Recorded.</p>
+    <button class="btn" onclick="goHome()">Home</button>
+    <button class="btn">View</button>
+    <div class="footer">@Cordova Public College</div>
+  </div>
+
+  <script>
+    function submitForm() {
+      document.getElementById("homePage").classList.remove("show");
+      document.getElementById("resultPage").classList.add("show");
+    }
+
+    function goHome() {
+      document.getElementById("resultPage").classList.remove("show");
+      document.getElementById("homePage").classList.add("show");
+    }
+  </script>
+</body>
+</html>
